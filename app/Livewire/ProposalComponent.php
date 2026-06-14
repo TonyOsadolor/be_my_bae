@@ -32,17 +32,17 @@ class ProposalComponent extends Component
         if ($this->proposal) {
             $this->proposalId = $this->proposal->id;
 
-            // if ($this->proposal->status === 'accepted') {
-            // $this->step = 'final';
+            if ($this->proposal->status === 'accepted') {
+            $this->step = 'final';
 
-            // if ($this->proposal->outing_location) {
-            //     $this->outingLocation = $this->proposal->outing_location;
-            //     $this->selectedDate = $this->proposal->selected_date;
-            //     $this->selectedTime = $this->proposal->selected_time;
-            //     $this->herNote = $this->proposal->her_note;
-            //     $this->schedulerSubmitted = true;
-            // }
-            // }
+            if ($this->proposal->outing_location) {
+                $this->outingLocation = $this->proposal->outing_location;
+                $this->selectedDate = $this->proposal->selected_date;
+                $this->selectedTime = $this->proposal->selected_time;
+                $this->herNote = $this->proposal->her_note;
+                $this->schedulerSubmitted = true;
+            }
+            }
 
             $this->currentMessage = $this->proposal->welcome_message ?? $this->proposal->message ?? $this->getWelcomeFallBackMessage();
         } else {
