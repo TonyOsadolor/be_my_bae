@@ -45,7 +45,7 @@ When she lands on the page, she is greeted with a message designed to reassure a
 Before running this app, locally make sure you have the following software installed:
 <ul>
     <li>XAMPP/WAMP/LAMP or it's equivalent</li>
-    <!-- <li>NPM</li> -->
+    <li>NPM</li>
     <li>Composer</li>
     <li>A Web Browser</li>
 </ul>
@@ -54,7 +54,7 @@ Before running this app, locally make sure you have the following software insta
     <li>Clone your forked repo. Navigate to your desired folder in your local machine using your favourite CMD terminal. Run: <code>git clone https://github.com/TonyOsadolor/be_my_bae.git</code>.</li>
     <li>Run <code>cd be_my_bae</code></li>
     <li>Run <code>composer install</code></li>
-    <!-- <li>Run <code>npm install</code></li> -->
+    <li>Run <code>npm install</code></li>
     <li>Copy all the contents of the <code>.env.example</code> file. Create <code>.env</code> file and paste all the contents you copied from <code>.env.exmaple</code> file to your <code>.env</code> file.</li>
     <li>Run <code>php artisan key:generate</code> to generate and assign a base64 encoded string for Laravel's APP_KEY in <code>.env</code></li>
     <li>The default database of the application is database is <code>database.sqlite</code>, just create a new file name <code>database.sqlite</code> inside your database folder.</li>
