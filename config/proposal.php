@@ -31,4 +31,9 @@ return [
      */
     'host_full_name' => env('PROPOSAL_HOST_FULL_NAME', 'Brown Bear'),
 
+    /**
+     * The email address of the host.
+     */
+    'host_email' => env('PROPOSAL_HOST_EMAIL', 'brown.bear@example.com'),
+
 ];

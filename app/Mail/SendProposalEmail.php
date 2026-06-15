@@ -5,6 +5,7 @@ namespace App\Mail;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Content;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -31,8 +32,13 @@ class SendProposalEmail extends Mailable
      */
     public function envelope(): Envelope
     {
+        $first_name = explode(' ', $this->proposal->name)[0] ?? 'Dear';
         return new Envelope(
-            subject: 'Send Proposal Email',
+            from: new Address(config('proposal.host_email'), config('proposal.host_full_name')),
+            replyTo: [
+                new Address(config('proposal.host_email'), config('proposal.host_full_name')),
+            ],
+            subject: $first_name . ', Our Journey has been Certified',
         );
     }
 
